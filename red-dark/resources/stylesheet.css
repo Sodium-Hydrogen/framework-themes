@@ -79,6 +79,7 @@ body{
   height: 5px;
   background-color: white;
   margin-bottom: 5px;
+  pointer-events: none;
   /*box-shadow: inset 1px 1px 1px black;*/
 }
 .scrolled .dropDownBtn .oval{
@@ -176,6 +177,14 @@ body{
 }
 .container .content .post{
   letter-spacing: .3px;
+}
+.container .content .post a,
+.footer a{
+  color: #CCC;
+}
+.container .content .post a:hover,
+.footer a:hover{
+  color: red;
 }
 .container .content .post table{
   width: 90%;
