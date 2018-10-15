@@ -171,9 +171,14 @@ body{
   justify-content: space-between;
   flex-direction: row;
 }
-.container .content .title{
-  padding-right: 20px;
-  white-space: nowrap;
+.container .row .title{                                                             
+  padding-right: 20px;                                                              
+}
+.container .content .title{                                                         
+  white-space: nowrap;                                                              
+}
+.container .content div img{                                                        
+  max-width: 100%;                                                                  
 }
 .container .content .post{
   letter-spacing: .3px;
@@ -286,6 +291,7 @@ body{
     flex-direction: column;
   }
   .container .content .title{
+    padding-right: 0;
     padding-bottom: 30px;
   }
   .container .row .post{
