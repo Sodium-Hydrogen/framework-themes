@@ -37,7 +37,7 @@ load_logged_header();
           $class = "";
         }
         if($page[$i] !== "home"){
-          echo "<a $class href=/index.php/$page[$i]>" . ucfirst($page[$i]) . "</a>";
+          echo "<a $class href=/index.php/" . str_replace(" ", "%20", $page[$i]) . ">" . ucwords($page[$i]) . "</a>";
         }else{
           echo "<a $class href=/index.php/>Home</a>";
         }
@@ -54,7 +54,7 @@ load_logged_header();
           echo "<div class='menuItem'>";
         }
         if($page[$i] !== "home"){
-          echo "<a href=/index.php/$page[$i]>" . ucfirst($page[$i]) . "</a>";
+          echo "<a $class href=/index.php/" . str_replace(" ", "%20", $page[$i]) . ">" . ucwords($page[$i]) . "</a>";
         }else{
           echo "<a href=/index.php/>Home</a>";
         }
