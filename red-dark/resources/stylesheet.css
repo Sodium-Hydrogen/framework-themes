@@ -171,17 +171,21 @@ body{
   justify-content: space-between;
   flex-direction: row;
 }
-.container .row .title{                                                             
-  padding-right: 20px;                                                              
+.container .row .title{
+  padding-right: 20px;
 }
-.container .content .title{                                                         
-  white-space: nowrap;                                                              
+.container .content .title{
+  white-space: nowrap;
 }
-.container .content div img{                                                        
-  max-width: 100%;                                                                  
+.content img{
+  max-width: 500px;
+}
+.content .title img{
+  min-width: 300px;
 }
 .container .content .post{
   letter-spacing: .3px;
+  position: relative;
 }
 .container .content .post a,
 .footer a{
@@ -207,6 +211,16 @@ body{
 }
 .container .content .post table td img{
   width: 250px;
+}
+.container .content .post .navigate{
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+.post .navigate button{
+  padding: 3px 7px;
+  border-radius: 3px;
+  border: 0px;
 }
 .container .row{
   flex-direction: row;

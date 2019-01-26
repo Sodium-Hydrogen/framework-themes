@@ -170,12 +170,29 @@ body{
   justify-content: space-between;
   flex-direction: row;
 }
-.container .content .title{
+.container .row .title{
   padding-right: 20px;
-  black-space: nowrap;
+}
+.container .content .title{
+  white-space: nowrap;
+}
+.content img{
+  max-width: 500px;
+}
+.content .title img{
+  min-width: 300px;
 }
 .container .content .post{
   letter-spacing: .3px;
+  position: relative;
+}
+.container .content .post a,
+.footer a{
+  color: #222;
+}
+.container .content .post a:hover,
+.footer a:hover{
+  color: DodgerBlue;
 }
 .container .content .post table{
   width: 90%;
@@ -193,6 +210,16 @@ body{
 }
 .container .content .post table td img{
   width: 250px;
+}
+.container .content .post .navigate{
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+.post .navigate button{
+  padding: 3px 7px;
+  border-radius: 3px;
+  border: 0px;
 }
 .container .row{
   flex-direction: row;
@@ -277,6 +304,7 @@ body{
     flex-direction: column;
   }
   .container .content .title{
+    padding-right: 0;
     padding-bottom: 30px;
   }
   .container .row .post{
