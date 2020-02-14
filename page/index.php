@@ -22,7 +22,7 @@
     foreach($content['posts'] as $post){
       $posturl = $_SERVER['SCRIPT_NAME']."/".$url."/".urlencode($post['name']);
       echo "<tr><td><a href='$posturl'>".$post['title']."</a></td>";
-      echo "<td><a href='$posturl'><img src='".$post['picture']."'</td></tr>";
+      echo "<td><a href='$posturl'><img src='".$post['picture']."' alt='".$post['title']."'></a></td></tr>";
     }
     echo "</tbody></table>";
   }

@@ -16,7 +16,6 @@ if(isset($error_page)){
   request_page_head();
 }
 ?>
-<body>
   <div class="menu" id="menu">
     <div class='title'>
     <?php
@@ -25,11 +24,11 @@ if(isset($error_page)){
     ?>
     </div>
     <div class='dropDownContainer'>
-    <button class="dropDownBtn" onclick="dropdown()">
+    <div class="dropDownBtn" onclick="dropdown()">
       <div class="oval"></div>
       <div class="oval"></div>
       <div class="oval"></div>
-    </button>
+    </div>
     <div class="menuLinks" id="dropDownContainer">
       <?php
       foreach($_SESSION['pages'] as $page){

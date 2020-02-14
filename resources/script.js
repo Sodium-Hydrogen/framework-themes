@@ -19,6 +19,3 @@ window.onclick = function(e) {
     }
   }
 }
-// function enlarge() {
-//   console.log("test");
-// }
