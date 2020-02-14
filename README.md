@@ -11,4 +11,4 @@ This theme works with v1 of my framework and supports easy toggling of light and
 
 ![](resources/mobile.png)
 
-[framework]: https://github.com/NaH012/PHP-Framework
+[framework]: https://github.com/Sodium-Hydrogen/PHP-Framework
