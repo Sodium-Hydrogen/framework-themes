@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body{
+  color: #222;
+  background-color: #EEE;
+}
+.menu{
+  background-color: rgba(255,255,255,0.6);
+}
+.scrolled{
+  background-color: #FFF;
+}
+.menu .title h1{
+  color: black;
+}
+.scrolled .title h1{
+  color: #222;
+}
+.menu .title .caption{
+  color: #333;
+}
+.menu .dropDownBtn{
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.menu .dropDownBtn .oval{
+  background-color: black;
+}
+.scrolled .dropDownBtn .oval{
+  background-color: #222;
+}
+.menu .dropDownBtn:hover .oval,
+.menu .dropDownBtn:focus .oval{
+  background-color: DodgerBlue;
+}
+.menu .show{
+  color: white;
+  background-color: #f9f9f9;
+}
+.menu .menuLinks .menuItem a,
+.menu .menuLinks .menuItem a:visited{
+  color: black;
+}
+.scrolled .menuLinks .menuItem a,
+.scrolled .menuLinks .menuItem a:visited{
+  color: #222;
+}
+.menu .menuLinks .menuItem a.current{
+  border-bottom-color: #222;
+}
+.menu .menuLinks .menuItem a.current:hover{
+  border-color: black;
+}
+.menu .menuLinks .menuItem a:hover{
+  background-color: DodgerBlue;
+  color: black;
+}
+.container{
+  background-color: #F8F8F8;
+}
+.container .content{
+  background-color: #F8F8F8;
+  border-bottom-color: #aaa;
+}
+.container .content .post a,
+.footer a{
+  color: #222;
+}
+.container .content .post a:hover,
+.footer a:hover{
+  color: DodgerBlue;
+}
+.container .content .post tr{
+  border-bottom-color: #AAA;
+}
+.post .navigate a{
+  background-color: #ccc;
+  color: black;
+}
+.container .footer{
+  background-color: #F8F8F8;
+}
+.copyright{
+  background-color: #DDD;
+}
+.container .footer .sections .socialBox .social{
+  color: #333;
+  border-color: #333;
+}
+.container .footer .sections .socialBox .social:hover{
+  color: DodgerBlue;
+  background-color: #BBB;
+  border-color: #BBB;
+}
+@media only screen and (max-width: 650px) {
+  .menu .show.menuLinks .menuItem a,
+  .menu .show.menuLinks .menuItem a:visited{
+    color: black;
+  }
+  .menu .show.menuLinks .menuItem a.current{
+    background-color: #ddd;
+  }
+  .menu .show.menuLinks .menuItem a:hover{
+    background-color: DodgerBlue;
+    color: black;
+  }
+}

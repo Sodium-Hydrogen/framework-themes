@@ -1,4 +1,3 @@
-
 window.onscroll = function(e) {
   var menu = document.getElementById("menu");
   var scrollTop = window.pageYOffset;
@@ -8,14 +7,8 @@ window.onscroll = function(e) {
     menu.classList.remove("scrolled");
   }
 }
-
 function dropdown(){
-  var myDropdown = document.getElementById("dropDownContainer");
-  if(myDropdown.classList.contains("show")){
-    myDropdown.classList.remove('show');
-  }else{
-    myDropdown.classList.add('show');
-  }
+  document.getElementById("dropDownContainer").classList.toggle("show");
 }
 
 window.onclick = function(e) {
@@ -26,3 +19,6 @@ window.onclick = function(e) {
     }
   }
 }
+// function enlarge() {
+//   console.log("test");
+// }

@@ -16,68 +16,64 @@ body > * {
 }
 body{
   font-family: "Roboto Condensed", sans-serif;
-  color: #CCC;
-  background-color: #333;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/resources/theme/resources/header.jpg");
 }
 .menu{
-  top: 0;
   right: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   z-index: 3;
-  background-color: rgba(0,0,0,0.6);
   min-height: 115px;
   position: fixed;
 }
 .scrolled{
   box-shadow: 0px -50px 20px 50px black;
-  background-color: #333;
   min-height: 50px;
 }
 .menu .title h1{
   margin: 0;
   padding: 10px 20px;
   font-size: 300%;
-  color: white;
   font-weight: normal;
 }
 .scrolled .title h1{
-  color: #ccc;
   font-size: 160%;
 }
 .menu .title .caption{
   font-weight: normal;
-  color: #DDD;
   padding-left: 40px;
   padding-bottom: 10px;
 }
 .scrolled .title .caption{
-  display: none;
+  font-size: 0px !important;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 0px;
+  /* display: none; */
 }
-.menu .selcetionContainer{
+.menu .menuLinks{
   right: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  height: 100%;
 }
 .menu .dropDownBtn{
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(0, 0, 0, 0);
   padding: 0px 15px;
   display: none;
   outline: none;
+  height: 100%;
 }
 .menu .dropDownBtn .oval{
   width: 35px;
   border-radius: 5px;
   height: 5px;
-  background-color: white;
   margin-bottom: 5px;
   pointer-events: none;
   /*box-shadow: inset 1px 1px 1px black;*/
@@ -85,88 +81,48 @@ body{
 .scrolled .dropDownBtn .oval{
   height: 3px;
   width: 30px;
-  background-color: #ccc;
   margin-bottom: 5px;
-}
-.menu .dropDownBtn:hover .oval,
-.menu .dropDownBtn:focus .oval{
-  background-color: red;
 }
 .menu .show{
   position: absolute;
-  top: 115px;
-  color: black;
-  background-color: #f9f9f9;
   min-width: 120px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   right: 0;
 }
-.scrolled .show{
+/* .scrolled .show{
   top: 50px;
-}
+} */
 .menu .dropdown{
   display: none;
 }
-.menu .show a,
-.menu .show a:visited{
-  color: black;
-  display: block;
+.menu .menuLinks .menuItem{
+  height: 100%
+}
+.menu .menuLinks .menuItem a,
+.menu .menuLinks .menuItem a:visited{
   text-decoration: none;
-  padding: 10px 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
 }
-.menu .show a:hover{
-  background-color: red;
-  color: white;
-}
-.menu .show .current{
-  background-color: #ddd;
-}
-.menu .selcetionContainer .menuItem{
-  padding: 45px 0px;
-}
-.scrolled .selcetionContainer .menuItem{
-  padding: 15px 0px;
-}
-.menu .selcetionContainer .menuItem a,
-.menu .selcetionContainer .menuItem a:visited{
-  background-color: inherit;
-  padding: 51px 10px;
-  color: white;
-  text-decoration: none;
-}
-.scrolled .selcetionContainer .menuItem a,
-.scrolled .selcetionContainer .menuItem a:visited{
-  color: #ccc;
-  padding: 16px 10px;
-  width: 100%;
-}
-.menu .selcetionContainer .currentItem a{
-  padding-bottom: 46px;
-  border-bottom: 5px #ccc solid;
-}
-.scrolled .selcetionContainer .currentItem a{
-  padding-bottom: 11px;
-}
-.menu .selcetionContainer .currentItem a:hover{
-  border-color: white;
-}
-.menu .selcetionContainer .menuItem a:hover{
-  background-color: red;
-  color: white;
+.menu .menuLinks .menuItem a.current{
+  /* padding-bottom: 46px; */
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  padding-top: 5px;
 }
 .container{
   margin-top: 500px;
   box-shadow: 0px 10px 100px 50px black;
-  background-color: #222;
   flex-grow: 1;
 }
 .container .content{
   margin: auto;
   width: 80%;
   max-width: 900px;
-  background-color: #222;
   padding: 80px 0px;
-  border-bottom: 1px #aaa solid;
+  border-bottom: 1px solid;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -182,18 +138,11 @@ body{
 }
 .content .title img{
   min-width: 300px;
+  margin-top: 25px;
 }
 .container .content .post{
   letter-spacing: .3px;
   position: relative;
-}
-.container .content .post a,
-.footer a{
-  color: #CCC;
-}
-.container .content .post a:hover,
-.footer a:hover{
-  color: red;
 }
 .container .content .post table{
   width: 90%;
@@ -202,7 +151,7 @@ body{
   border-collapse: collapse;
 }
 .container .content .post tr{
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid;
 }
 .container .content .post table td{
   margin: auto;
@@ -217,10 +166,11 @@ body{
   bottom: 0;
   position: absolute;
 }
-.post .navigate button{
+.post .navigate a{
   padding: 3px 7px;
   border-radius: 3px;
   border: 0px;
+  text-decoration: none;
 }
 .container .row{
   flex-direction: row;
@@ -229,6 +179,7 @@ body{
   margin: 0px auto;
   padding: 0px 70px;
   padding-top: 20px;
+  flex-grow: 1;
 }
 .container .column{
   flex-direction: column;
@@ -241,7 +192,6 @@ body{
   margin: auto;
   width: 80%;
   max-width: 900px;
-  background-color: #222;
   min-height: 120px;
   display: flex;
   flex-direction: row;
@@ -262,7 +212,6 @@ body{
 .copyright{
   text-align: center;
   padding: 20px 0;
-  background-color: #1c1c1c;
 }
 .container .footer .sections .socialBox{
   list-style: none;
@@ -271,17 +220,18 @@ body{
   display: inline-block;
   width: 45px;
   height: 45px;
-  color: #AAA;
-  border: 2px solid #AAA;
+  border: 2px solid;
   border-radius: 100%;
-  text-align: center;
   font-size: 27px;
-  padding: 7px 0;
+  text-decoration: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  /* padding: 7px 0; */
 }
-.container .footer .sections .socialBox .social:hover{
-  color: red;
-  background-color: #ccc;
-  border-color: #ccc;
+.container .footer .sections .socialBox .social i{
+  transition: unset;
 }
 .container .footer .sections .socialBox>li{
   padding: 0 5px 10px 5px;
@@ -292,11 +242,26 @@ body{
 }
 @media only screen and (max-width: 650px) {
   /*initial mobile screen*/
-  .menu .selcetionContainer{
+  .menu .menuLinks{
     display: none;
+    height: unset;
+  }
+  .menu .menuLinks .menuItem{
+    height: unset;
+  }
+  .menu .menuLinks .menuItem a.current{
+    border: none;
+  }
+  .menu .show.menuLinks .menuItem a,
+  .menu .show.menuLinks .menuItem a:visited{
+    display: block;
+    text-decoration: none;
+    padding: 10px 12px;
   }
   .menu .dropDownBtn{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .menu .show{
     display: block;
@@ -335,12 +300,12 @@ body{
   .scrolled{
     min-height: 50px;
   }
-  .menu .show{
+  /* .menu .show{
     top: 100px;
   }
   .scrolled .show{
     top: 50px;
-  }
+  } */
   .container .content .post table td img{
     width: 130px;
   }
