@@ -20,6 +20,7 @@
 </div>
 <div class="copyright">
   <?php
+		echo $_SESSION['login_link'] ? "<a href='/login.php'>Login</a>" : "";
     echo "Copyright © " . date("Y") . " Michael Julander";
   ?>
 </div>

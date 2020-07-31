@@ -6,7 +6,7 @@ run
 git clone https://github.com/Sodium-Hydrogen/framework-themes.git theme
 ```
 
-This theme works with v1 of my framework and supports easy toggling of light and dark mode via the framework's settings menu.
+This theme works with v1.0.1 of my framework and supports easy toggling of light and dark mode via the framework's settings menu.
 
 ----
 

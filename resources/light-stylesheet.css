@@ -63,11 +63,13 @@ body{
   border-bottom-color: #aaa;
 }
 .container .content .post a,
-.footer a{
+.footer a,
+.copyright a{
   color: #222;
 }
 .container .content .post a:hover,
-.footer a:hover{
+.footer a:hover,
+.copyright a:hover{
   color: DodgerBlue;
 }
 .container .content .post tr{

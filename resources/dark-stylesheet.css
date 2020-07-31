@@ -64,11 +64,13 @@ body{
   border-bottom-color: #aaa;
 }
 .container .content .post a,
-.footer a{
+.footer a,
+.copyright a{
   color: #CCC;
 }
 .container .content .post a:hover,
-.footer a:hover{
+.footer a:hover,
+.copyright a:hover{
   color: red;
 }
 .container .content .post tr{
