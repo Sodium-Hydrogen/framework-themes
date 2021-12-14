@@ -1,7 +1,6 @@
 <?php
 require (dirname(__FILE__).'/functions.php');
-$cur = get_url();
-queue_header("<link rel='stylesheet' href='/resources/fontawesome/css/all.css'>");
+$cur = get_url(false);
 queue_header("<link rel='icon' href='/resources/theme/resources/favicon.png'>");
 queue_header("<link rel='stylesheet' href='/resources/theme/resources/stylesheet.css'>");
 if(!isset($_SESSION['dark_mode']) || $_SESSION['dark_mode'] === true){
@@ -13,6 +12,9 @@ queue_header("<script src='/resources/theme/resources/script.js'></script>");
 if(isset($error_page)){
   request_page_head("Error");
 }else{
+  foreach($content["in_html_header"] as $header){
+    queue_header($header["content"]);
+  }
   request_page_head();
 }
 ?>
@@ -31,17 +33,19 @@ if(isset($error_page)){
     </div>
     <div class="menuLinks" id="dropDownContainer">
       <?php
+      $home = null;
       foreach($_SESSION['pages'] as $page){
-        if(strtolower($page['name']) == $cur){
+        if(empty($_SESSION["error"]) && strtolower($page['title']) == explode("/", $cur)[0] || ($home === null && $cur == "")){
           $class = "class='current'";
         }else{
           $class = "";
         }
         echo "<div class='menuItem'>";
-        if($page["name"] !== "Home"){
-          echo "<a $class href='/index.php/".urlencode($page['name'])."'>".$page['name']."</a>";
+        if($home == null){
+          echo "<a $class href=/index.php/>$page[title]</a>";
+          $home = $page['title'];
         }else{
-          echo "<a $class href=/index.php/>Home</a>";
+          echo "<a $class href='/index.php/".urlencode($page['title'])."'>".$page['title']."</a>";
         }
         echo "</div>";
       }

@@ -1,10 +1,8 @@
 <div class="footer">
   <?php
-  $footers = get_all_footers();
-  $footerCnt = count($footers);
-  foreach($footers as $footer){
-    echo "<div class='sections num$footerCnt'><h4>".$footer['name']."</h4>".$footer['content'];
-    if(count($footer['links']) > 0){
+  foreach($_SESSION["footers"] as $footer){
+    echo "<div class='sections'><h4>".$footer['title']."</h4>".$footer['content'];
+    if(sizeof($footer['links'])){
       echo "<ul class='socialBox'>";
       foreach($footer['links'] as $link){
         echo "<li><a class='social' href='".$link['url']."' target='_blank'>";
@@ -20,7 +18,7 @@
 </div>
 <div class="copyright">
   <?php
-		echo $_SESSION['login_link'] ? "<a href='/login.php'>Login</a>" : "";
+		echo $_SESSION['show_login'] ? "<a href='/login.php'>Login</a>" : "";
     echo "Copyright © " . date("Y") . " Michael Julander";
   ?>
 </div>

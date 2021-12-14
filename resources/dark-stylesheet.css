@@ -76,7 +76,7 @@ body{
 .container .content .post tr{
   border-bottom-color: #AAA;
 }
-.container .post .navigate a{
+.container .navigate a{
   background-color: #ccc;
   color: black;
 }
